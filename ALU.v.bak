@@ -1,0 +1,7 @@
+module ALU(
+input clk,
+input rst,
+input reg[7:0] A,B,
+output reg[7:0] out);
+
+endmodule

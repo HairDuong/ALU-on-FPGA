@@ -1,0 +1,23 @@
+
+module mux_8bit_4to1 (
+  input wire [7:0] i_add,
+  input wire [7:0] i_sub,
+  input wire [7:0] i_mul,
+  input wire [7:0] i_div,
+  input wire [1:0] sel,
+  output reg [7:0] out );
+  
+  always @(*)
+    begin
+	       case(sel)
+        2'b00: out = i_add;
+        2'b01: out = i_sub;
+        2'b10: out = i_mul;
+        2'b11: out = i_div;
+        default: out = 8'b0;
+      endcase
+    end
+endmodule
+      
+  
+  

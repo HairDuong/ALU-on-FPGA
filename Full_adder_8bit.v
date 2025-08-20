@@ -1,0 +1,25 @@
+ module full_adder (
+    input X, Y, Cin,
+    output Sum, Cout
+);
+    assign Sum = X ^ Y ^ Cin;
+    assign Cout = (X & Y) | (Cin & (X ^ Y));
+endmodule
+
+module Full_adder_8bit (
+    input [7:0] A, B,
+    input Cin,
+    output [7:0] Sum,
+    output Cout
+);
+    wire C1, C2, C3, C4, C5, C6, C7;
+
+    full_adder FA0 (A[0], B[0], Cin,  Sum[0], C1);
+    full_adder FA1 (A[1], B[1], C1,   Sum[1], C2);
+    full_adder FA2 (A[2], B[2], C2,   Sum[2], C3);
+    full_adder FA3 (A[3], B[3], C3,   Sum[3], C4);
+	 full_adder FA4 (A[4], B[4], C4,   Sum[4], C5);
+	 full_adder FA5 (A[5], B[5], C5,   Sum[5], C6);
+	 full_adder FA6 (A[6], B[6], C6,   Sum[6], C7);
+	 full_adder FA7 (A[7], B[7], C7,   Sum[7], Cout);
+endmodule
