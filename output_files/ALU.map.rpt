@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Wed Aug 20 10:28:42 2025
+Sat Aug 23 15:53:25 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -69,15 +69,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 20 10:28:42 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sat Aug 23 15:53:25 2025       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; ALU                                         ;
 ; Top-level Entity Name              ; ALU                                         ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 1,118                                       ;
-;     Total combinational functions  ; 880                                         ;
-;     Dedicated logic registers      ; 618                                         ;
-; Total registers                    ; 618                                         ;
+; Total logic elements               ; 1,122                                       ;
+;     Total combinational functions  ; 884                                         ;
+;     Dedicated logic registers      ; 619                                         ;
+; Total registers                    ; 619                                         ;
 ; Total pins                         ; 6                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 5,120                                       ;
@@ -285,20 +285,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,118                    ;
+; Estimated Total logic elements              ; 1,122                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 880                      ;
+; Total combinational functions               ; 884                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 306                      ;
-;     -- 3 input functions                    ; 256                      ;
+;     -- 4 input functions                    ; 307                      ;
+;     -- 3 input functions                    ; 259                      ;
 ;     -- <=2 input functions                  ; 318                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 688                      ;
+;     -- normal mode                          ; 692                      ;
 ;     -- arithmetic mode                      ; 192                      ;
 ;                                             ;                          ;
-; Total registers                             ; 618                      ;
-;     -- Dedicated logic registers            ; 618                      ;
+; Total registers                             ; 619                      ;
+;     -- Dedicated logic registers            ; 619                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 6                        ;
@@ -308,7 +308,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 334                      ;
-; Total fan-out                               ; 4800                     ;
+; Total fan-out                               ; 4816                     ;
 ; Average fan-out                             ; 3.15                     ;
 +---------------------------------------------+--------------------------+
 
@@ -318,7 +318,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |ALU                                                                                                                                    ; 880 (0)             ; 618 (0)                   ; 5120        ; 1            ; 1       ; 0         ; 6    ; 0            ; |ALU                                                                                                                                                                                                                                                                                                                                            ; ALU                               ; work         ;
+; |ALU                                                                                                                                    ; 884 (0)             ; 619 (0)                   ; 5120        ; 1            ; 1       ; 0         ; 6    ; 0            ; |ALU                                                                                                                                                                                                                                                                                                                                            ; ALU                               ; work         ;
 ;    |Full_adder_8bit:full_adder_8bit_inst|                                                                                               ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Full_adder_8bit:full_adder_8bit_inst                                                                                                                                                                                                                                                                                                       ; Full_adder_8bit                   ; work         ;
 ;       |full_adder:FA1|                                                                                                                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Full_adder_8bit:full_adder_8bit_inst|full_adder:FA1                                                                                                                                                                                                                                                                                        ; full_adder                        ; work         ;
 ;       |full_adder:FA2|                                                                                                                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Full_adder_8bit:full_adder_8bit_inst|full_adder:FA2                                                                                                                                                                                                                                                                                        ; full_adder                        ; work         ;
@@ -334,7 +334,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |full_subtractor:fs5|                                                                                                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Full_subtractor_8bit:Full_subtractor_8bit_inst|full_subtractor:fs5                                                                                                                                                                                                                                                                         ; full_subtractor                   ; work         ;
 ;       |full_subtractor:fs7|                                                                                                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Full_subtractor_8bit:Full_subtractor_8bit_inst|full_subtractor:fs7                                                                                                                                                                                                                                                                         ; full_subtractor                   ; work         ;
 ;    |UART_RX:uart_inst|                                                                                                                  ; 39 (39)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|UART_RX:uart_inst                                                                                                                                                                                                                                                                                                                          ; UART_RX                           ; work         ;
-;    |data_input:data_input_inst|                                                                                                         ; 19 (19)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|data_input:data_input_inst                                                                                                                                                                                                                                                                                                                 ; data_input                        ; work         ;
+;    |data_input:data_input_inst|                                                                                                         ; 23 (23)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|data_input:data_input_inst                                                                                                                                                                                                                                                                                                                 ; data_input                        ; work         ;
 ;    |divider_8bit:divider_8bit_inst|                                                                                                     ; 77 (3)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|divider_8bit:divider_8bit_inst                                                                                                                                                                                                                                                                                                             ; divider_8bit                      ; work         ;
 ;       |lpm_divide:Div0|                                                                                                                 ; 74 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|divider_8bit:divider_8bit_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                                             ; lpm_divide                        ; work         ;
 ;          |lpm_divide_ghm:auto_generated|                                                                                                ; 74 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|divider_8bit:divider_8bit_inst|lpm_divide:Div0|lpm_divide_ghm:auto_generated                                                                                                                                                                                                                                                               ; lpm_divide_ghm                    ; work         ;
@@ -467,15 +467,16 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------+
-; State Machine - |ALU|data_input:data_input_inst|state       ;
-+------------------+-----------+-----------+------------------+
-; Name             ; state.S_A ; state.S_B ; state.S_OPERATOR ;
-+------------------+-----------+-----------+------------------+
-; state.S_A        ; 0         ; 0         ; 0                ;
-; state.S_OPERATOR ; 1         ; 0         ; 1                ;
-; state.S_B        ; 1         ; 1         ; 0                ;
-+------------------+-----------+-----------+------------------+
++-----------------------------------------------------------------------------+
+; State Machine - |ALU|data_input:data_input_inst|state                       ;
++------------------+---------------+-----------+------------------+-----------+
+; Name             ; state.S_EQUAL ; state.S_B ; state.S_OPERATOR ; state.S_A ;
++------------------+---------------+-----------+------------------+-----------+
+; state.S_A        ; 0             ; 0         ; 0                ; 0         ;
+; state.S_OPERATOR ; 0             ; 0         ; 1                ; 1         ;
+; state.S_B        ; 0             ; 1         ; 0                ; 1         ;
+; state.S_EQUAL    ; 1             ; 0         ; 0                ; 1         ;
++------------------+---------------+-----------+------------------+-----------+
 
 
 Encoding Type:  One-Hot
@@ -506,11 +507,13 @@ Encoding Type:  One-Hot
 ; led_driver_4digit_595:led_display|shift_data[4..7] ; Stuck at GND due to stuck port data_in ;
 ; led_driver_4digit_595:led_display|state~4          ; Lost fanout                            ;
 ; led_driver_4digit_595:led_display|state~5          ; Lost fanout                            ;
+; data_input:data_input_inst|state~8                 ; Lost fanout                            ;
+; data_input:data_input_inst|state~9                 ; Lost fanout                            ;
 ; UART_RX:uart_inst|state~4                          ; Lost fanout                            ;
 ; UART_RX:uart_inst|state~5                          ; Lost fanout                            ;
 ; led_driver_4digit_595:led_display|digits[1][2]     ; Stuck at GND due to stuck port data_in ;
 ; led_driver_4digit_595:led_display|digits[1][3]     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 20             ;                                        ;
+; Total Number of Removed Registers = 22             ;                                        ;
 +----------------------------------------------------+----------------------------------------+
 
 
@@ -537,10 +540,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 618   ;
+; Total registers                              ; 619   ;
 ; Number of registers using Synchronous Clear  ; 52    ;
 ; Number of registers using Synchronous Load   ; 69    ;
-; Number of registers using Asynchronous Clear ; 288   ;
+; Number of registers using Asynchronous Clear ; 289   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 417   ;
 ; Number of registers using Preset             ; 0     ;
@@ -905,27 +908,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 6                           ;
-; cycloneiii_ff         ; 140                         ;
-;     CLR               ; 43                          ;
+; cycloneiii_ff         ; 141                         ;
+;     CLR               ; 44                          ;
 ;     ENA               ; 23                          ;
 ;     ENA CLR           ; 70                          ;
 ;     ENA SCLR SLD      ; 4                           ;
-; cycloneiii_lcell_comb ; 407                         ;
+; cycloneiii_lcell_comb ; 411                         ;
 ;     arith             ; 107                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 31                          ;
 ;         3 data inputs ; 75                          ;
-;     normal            ; 300                         ;
+;     normal            ; 304                         ;
 ;         0 data inputs ; 20                          ;
 ;         1 data inputs ; 23                          ;
 ;         2 data inputs ; 100                         ;
-;         3 data inputs ; 38                          ;
-;         4 data inputs ; 119                         ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 120                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 16.70                       ;
-; Average LUT depth     ; 7.69                        ;
+; Average LUT depth     ; 7.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -995,7 +998,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Aug 20 10:28:23 2025
+    Info: Processing started: Sat Aug 23 15:53:05 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1040,8 +1043,8 @@ Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(34): 
 Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(35): truncated value with size 32 to match size of target (8) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 35
 Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(36): truncated value with size 32 to match size of target (8) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 36
 Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(76): truncated value with size 8 to match size of target (4) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 76
-Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(100): truncated value with size 32 to match size of target (5) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 100
-Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(110): truncated value with size 32 to match size of target (2) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 110
+Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(99): truncated value with size 32 to match size of target (5) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 99
+Warning (10230): Verilog HDL assignment warning at led_driver_4digit_595.v(109): truncated value with size 32 to match size of target (2) File: C:/D/FBGA project/Veron/ALU/led_driver_4digit_595.v Line: 109
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5724.tdf
     Info (12023): Found entity 1: altsyncram_5724 File: C:/D/FBGA project/Veron/ALU/db/altsyncram_5724.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_isc.tdf
@@ -1064,7 +1067,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ggc File: C:/D/FBGA project/Veron/ALU/db/cmpr_ggc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.08.20.10:28:34 Progress: Loading sldc0143fd4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.08.23.15:53:17 Progress: Loading sldc0143fd4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1160,23 +1163,23 @@ Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity
 Info (13000): Registers with preset signals will power-up high File: C:/D/FBGA project/Veron/ALU/UART_RX.v Line: 19
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "led_driver_4digit_595:led_display|lpm_divide:Mod1|lpm_divide_f9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_34f:divider|add_sub_7_result_int[0]~0" File: C:/D/FBGA project/Veron/ALU/db/alt_u_div_34f.tdf Line: 62
     Info (17048): Logic cell "led_driver_4digit_595:led_display|lpm_divide:Mod1|lpm_divide_f9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_34f:divider|add_sub_6_result_int[0]~10" File: C:/D/FBGA project/Veron/ALU/db/alt_u_div_34f.tdf Line: 57
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 43 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1151 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1155 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 1134 logic cells
+    Info (21061): Implemented 1138 logic cells
     Info (21064): Implemented 5 RAM segments
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Wed Aug 20 10:28:42 2025
-    Info: Elapsed time: 00:00:19
+    Info: Processing ended: Sat Aug 23 15:53:26 2025
+    Info: Elapsed time: 00:00:21
     Info: Total CPU time (on all processors): 00:00:35
 
 

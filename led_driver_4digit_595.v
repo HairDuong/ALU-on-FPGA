@@ -74,15 +74,13 @@ module led_driver_4digit_595 (
             case (state)
                 IDLE: begin
                     digit_val <= digits[digit_index];
-                    // SỬA LẠI DIGIT SELECTION CHO ĐÚNG THỨ TỰ
                     case (digit_index)
-                        2'd3: digit_sel <= 8'b11110111;  // Digit 0 (trái nhất - nghìn)
-                        2'd2: digit_sel <= 8'b11111011;  // Digit 1 (trăm)
-                        2'd1: digit_sel <= 8'b11111101;  // Digit 2 (chục)
-                        2'd0: digit_sel <= 8'b11111110;  // Digit 3 (phải nhất - đơn vị)
+                        2'd3: digit_sel <= 8'b11110111;
+                        2'd2: digit_sel <= 8'b11111011;
+                        2'd1: digit_sel <= 8'b11111101;
+                        2'd0: digit_sel <= 8'b11111110;
                         default: digit_sel <= 8'b11111111;
                     endcase
-						  
                     seg_code <= seg7(digit_val);
                     shift_data <= {~seg_code, ~digit_sel};
                     bit_cnt <= 15;

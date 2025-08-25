@@ -9,7 +9,8 @@ module data_input (
 
 localparam S_A        = 2'b00,
            S_OPERATOR = 2'b01,
-           S_B        = 2'b10;
+           S_B        = 2'b10,
+			  S_EQUAL    = 2'b11;
            
 reg [1:0] state, operator_reg;
 reg [7:0] A_reg, B_reg;
@@ -47,10 +48,23 @@ begin
             S_B: begin
                 if (data_valid) begin  // Kiểm tra data_valid cho mỗi ký tự
                     B_reg <= value;
-						  outdata_valid <=1'b1;
-                    state <= S_A;
+						  
+                    state <= S_EQUAL;
                 end
             end
+				S_EQUAL: begin
+				if(data_valid) begin
+				if(value== 8'd61)
+						begin
+						outdata_valid <=1'b1;
+						state <= S_A;
+						end else
+								begin 
+								outdata_valid <=1'b0;
+								state <= S_A;
+								end
+				end
+				end
             
             default: state <= S_A;
         endcase

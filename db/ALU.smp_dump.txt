@@ -8,10 +8,11 @@ state.LATCH_HI 1 0 0 1 0
 state.LATCH_LO 0 0 0 1 1 
 
 State Machine - |ALU|data_input:data_input_inst|state
-Name state.S_A state.S_B state.S_OPERATOR 
-state.S_A 0 0 0 
-state.S_OPERATOR 1 0 1 
-state.S_B 1 1 0 
+Name state.S_EQUAL state.S_B state.S_OPERATOR state.S_A 
+state.S_A 0 0 0 0 
+state.S_OPERATOR 0 0 1 1 
+state.S_B 0 1 0 1 
+state.S_EQUAL 1 0 0 1 
 
 State Machine - |ALU|UART_RX:uart_inst|state
 Name state.11 state.10 state.01 state.00 
