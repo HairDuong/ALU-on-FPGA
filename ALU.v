@@ -15,8 +15,8 @@ wire data_valid, Cout, Bout, div0;
 // UART
 UART_RX uart_inst
 (
-.clock(clk),
-.reset(rst),
+.clk(clk),
+.rst(rst),
 .rx(rx),
 .value(value),
 .data_valid(data_valid));

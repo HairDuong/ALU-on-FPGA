@@ -6,8 +6,8 @@
 `define STOP      2'b11
 
 module UART_RX (
-    input wire clock,
-    input wire reset,
+    input wire clk,
+    input wire rst,
     input wire rx,
     output reg [7:0] value,
     output reg data_valid
@@ -31,8 +31,8 @@ assign data_end     = (state == `DATA)  && counter_end && (data_cnt == 3'd7);
 assign stop_end     = (state == `STOP)  && counter_end;
 
 // Đồng bộ tín hiệu rx
-always @(posedge clock or negedge reset) begin
-    if (!reset) begin
+always @(posedge clk or negedge rst) begin
+    if (!rst) begin
         syncff0 <= 1'b1;
         syncff1 <= 1'b1;
     end else begin
@@ -42,16 +42,16 @@ always @(posedge clock or negedge reset) begin
 end
 
 // Phát hiện cạnh xuống cho start bit
-always @(posedge clock or negedge reset) begin
-    if (!reset) rx_ <= 1'b1;
+always @(posedge clk or negedge rst) begin
+    if (!rst) rx_ <= 1'b1;
     else        rx_ <= syncff1;
 end
 
 assign start = ~syncff1 & rx_;  // cạnh xuống (falling edge)
 
 // State machine
-always @(posedge clock or negedge reset) begin
-    if (!reset) state <= `IDLE;
+always @(posedge clk or negedge rst) begin
+    if (!rst) state <= `IDLE;
     else        state <= next;
 end
 
@@ -66,8 +66,8 @@ always @(*) begin
 end
 
 // Bộ đếm baudrate
-always @(posedge clock or negedge reset) begin
-    if (!reset)
+always @(posedge clk or negedge rst) begin
+    if (!rst)
         counter <= 0;
     else if (state != `IDLE) begin
         if (counter_end)
@@ -78,24 +78,24 @@ always @(posedge clock or negedge reset) begin
 end
 
 // Đếm bit data
-always @(posedge clock or negedge reset) begin
-    if (!reset)
+always @(posedge clk or negedge rst) begin
+    if (!rst)
         data_cnt <= 0;
     else if ((state == `DATA) && counter_end)
         data_cnt <= data_cnt + 1;
 end
 
 // Ghi dữ liệu khi đến thời điểm lấy mẫu giữa bit
-always @(posedge clock or negedge reset) begin
-    if (!reset)
+always @(posedge clk or negedge rst) begin
+    if (!rst)
         rdat <= 8'b0;
     else if ((state == `DATA) && get_dat)
         rdat <= {syncff1, rdat[7:1]};  // shift từ LSB
 end
 
 // Gán dữ liệu ra LED sau khi kết thúc STOP
-always @(posedge clock or negedge reset) begin
-    if (!reset)
+always @(posedge clk or negedge rst) begin
+    if (!rst)
         value <= 8'b0;
     else if (stop_end)
         value <= rdat;
@@ -104,8 +104,8 @@ end
 
 // chỉ gán dữ liệu khi stop_end
 
-always @(posedge clock or negedge reset) begin
-    if (!reset) begin
+always @(posedge clk or negedge rst) begin
+    if (!rst) begin
         data_valid <= 0;
     end else begin
         data_valid <= stop_end;
